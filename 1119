@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="zh=cn">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>我的第一个网站</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <style>
+            ul li{list-style: none;}
+	        html{
+	            height: 100%;
+            }
+	        body {
+	            background-color: black;
+	            width: 100%;
+	        }
+            @charset 'utf-8';
+*{
+    margin: 0;padding: 0;
+    }/*去除内外边距*/
+a{
+   text-decoration: none; /*清除下划线*/
+   font-family: "微软雅黑";
+   color: #505152;
+  }
+body{
+     font-family: "微软雅黑";
+     padding-top: 20px;
+}
+.hd-top{
+    height: 30px;
+    border-bottom: 1px solid #dadada;
+    background-color: #f5f5f5;
+    
+    z-index: 9999;
+    /*定层级，前提必须有定位*/
+    left: 0;
+    top: 0;
+    position: fixed;
+    /*浮动定位*/
+    width: 100%;
+    /*占完全屏*/
+    
+    }
+.wp{
+    width: 1200px;
+    margin: 0 auto;/*默认自动居中*/
+    /*margin: 上 右 下 左
+      margin: 上 左右 下*/
+    /*border: 1px solid red;*/
+    /*crtl+'/'是注释*/}
+.hd-top .left{
+   line-height: 30px;
+    width: 500px;
+    float: left;
+  /*左浮动，块元素一行展示要浮动*/}
+.hd-top .right{
+    line-height: 30px;
+    float: right;}
+.clear{
+    clear: both;
+    /*清除浮动*/}
+
+.hd-top .left a{
+    color: #878787;
+    font-size: 12px;}
+
+.hd-top .left a img{
+    position: relative;
+    /*相对定位*/
+    top: 2px;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+.hd-top .right span{
+    color: #515151;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    margin-right: 50px;}
+
+.hd-top .right a{
+    position: relative;
+    /*相对定位*/
+    top: 2px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #878787;}
+.hd-top .right a img{
+    position: relative;
+    /*相对定位*/
+    top: 2px;
+    margin-right: 10px; 
+    margin-left: 10px;}
+.hd-top .right em{
+    position: relative;
+    margin-right: 1px;
+    font-style: normal;
+    /*默认斜体，出去斜体*/
+    /*height: 14px;*/
+    font-size: 14px;
+    color:#d1d1d1;}
+
+.hd-top .right a:last-child{
+    display:inline-block;
+    padding-right: 0px;
+    background-image: url(../images/04.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    }
+
+.hd-buttom{
+    height: 55px;
+    /*border:1px solid red;*/
+    background-color: white;
+    padding-top: 15px;}
+
+.hd-buttom .left{
+    float: left;}
+
+.hd-buttom .left .logo{
+    position: relative;
+    height: 55px;
+    }
+
+.hd-buttom .logo-text{
+    color:#616161;
+    height: 36px;
+    line-height: 36px;
+    float: right;
+    margin-top: 3px;
+    margin-left: 30px;
+    /*padding-left: 25px;*/
+    padding-left: 15px;
+    background: url(../images/06.png) no-repeat 15px center;
+    border-left: 1px solid #dfdfdf;
+    font-size: 17px;}  
+
+.logo-text span{
+    padding-left: 10px;}
+
+.hd-buttom .right{
+    float: right;
+    text-align: right;}
+
+.hd-buttom .right span{
+        font-size: 24px;
+        color: #f08300;
+        font-family: "Arial";
+        padding-left: 41px;
+        background: url(../images/07.png) no-repeat left center;}
+
+.hd-buttom .right em{
+    font-style: normal;
+    color: #906a57;
+    font-size: 12px;}
+
+.logo img{
+    float: left;
+    }
+nav {
+      background-color:#4b4948;
+}
+ .fix{*zoom:1; }
+ .fix:after,.fix:before{
+      display:block; 
+      content:"clear";
+       height:0; 
+       clear:both; 
+       overflow:hidden; 
+       visibility:hidden; }
+       
+nav ul{
+    height: 46px;
+}
+nav ul li{
+    list-style:none;
+    float: left;
+    position: relative;
+    /*list-style-type: none;*/
+}
+
+nav ul li a{
+    /*position: relative;*/
+    width: 150px;
+    height: 46px;
+    display: block;
+    text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    color: white;  
+}
+nav ul .on a,nav ul li a:hover{
+    background-color: #f08300;
+    /*nav层级高，*/
+}
+
+nav ul li dl{
+  left: 0px;
+  width: 150px;
+  top: 100%;
+  position: absolute;
+  z-index: 333;
+  color: #000; 
+  background-color: #666;
+  display: none;
+}
+.banner img{
+    width: 100%;
+    display: block;
+}
+.slideBox{ 
+    width:100%; overflow:hidden; position:relative;border: 1px solid#ccc;
+    box-sizing:        
+    border-box;
+}
+.slideBox .hd{
+    left: 50%; 
+    margin-left: -37px;
+    height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  
+}
+.slideBox .hd ul li{border-radius: 50%;
+float:left; margin-right:10px;  width:15px; height:15px; line-height:14px; text-align:center; background: orange; cursor:pointer; 
+}
+.slideBox .hd ul li.on{ background:#f00; color: red;
+}
+.slideBox .bd{ position:relative; height:100%; z-index:0;   
+}
+.slideBox .bd li{ zoom:1; vertical-align:middle; 
+}
+.slideBox .bd img{ width:100%; display:block;  
+}
+.slideBox .prev,
+.slideBox .next{
+    position:absolute; 
+    top:50%; 
+    margin-top:-25px; 
+    display:block; 
+    width:23px; 
+    height:35px; 
+}
+.prev{
+    left:3%; 
+    background: url(../images/slider-arrow.png) -116px 0px no-repeat;
+}
+.next{
+    right:3%;
+    background: url(../images/slider-arrow.png) 5px 0px no-repeat;
+}
+.slideBox .prev:hover,
+.slideBox .next:hover{
+     filter:alpha(opacity=100);opacity:1;  
+}
+.banner-buttom{
+    height: 48px;
+    line-height: 48px;
+    background-color: #f9f9f9;
+    font-size: 13px;
+    font-family: '微软雅黑';
+    color:#878787;
+    border-bottom: 1px solid #e7e7e7;
+    }
+.banner-buttom .wp {
+    text-align: right;
+}
+.banner-buttom .wp a{
+    font-size: 13px;
+    font-family: '微软雅黑';
+    color: #f08300;
+}
+.banner-buttom a:nth-child(2)
+{
+    color: #878787;
+}
+.h45{
+    height: 45px;
+    background-color: white;
+}
+
+/*内容部分*/
+.main{
+    background-color: white;
+}
+.main .wp .pro-info{
+    width: 905px;
+    float: left;
+    border: 1px solid #c9c9c9;    
+}
+
+.main .pro-hot{
+    width: 260px;
+    float: right;
+}
+.main .pro-info .ul-pro li{
+    padding: 10px 0 10px 32px;
+    height: 27px;
+    /*全部加上黄色高27px*/
+    line-height: 27px;
+    border-bottom:1px dashed  #c9c9c9;
+}
+.main .pro-info .top ul li span{
+    color: #505152;
+    font-size: 13px; 
+}
+.main .pro-info .top ul li a{
+    padding: 0 22px;
+    height:27px;
+    color: #505152;
+    display:inline-block;
+}
+
+.main .pro-info  .top ul li .on{
+    background-color: #f1890c;
+    color: #fff;
+}
+.ul-pro{
+    padding-top: 17px;
+}
+
+/*家装案例部分*/
+.case-list {
+    padding:30px 29px 0 29px;
+}
+.tit-a1{
+    color: #505152;
+    font-size: 24px;
+    border-bottom: 1px solid #c9c9c9;
+    height: 46px;
+   /*左边46px(10*2+26)与右边43px(8*2+26)取大的值*/    
+    margin-bottom: 22px;
+}
+
+
+.tit-a1 strong{
+    width: 150px;
+    display:block;
+    /*内联元素无法定义高度，定义为block更稳定，inlne-block有小bug*/
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 4px solid #f1890c;
+    float: left;
+}
+.tit-a1 .so{
+        float: right;
+        width: 230px;
+        height: 25px;
+        line-height: 25px;
+        border: 1px solid#c9c9c9;   
+        position: relative;     
+        /*第一步*/
+        margin-top: 10px;
+}
+
+.tit-a1 .so input{
+    border: none;
+    /*border: 1px solid red;*/
+    padding-left:15px;
+    width: 163px;
+    background-color: transparent;
+    /*透明的*/
+    height: 25px;
+    line-height: 25px;
+    line-height: 25px \9;
+    /*兼容*/
+    color: #ccc;
+    display: block;
+}
+
+.tit-a1 .so .sub-inp{
+    cursor: pointer;
+    /*鼠标经过的时候是个小手*/
+    width: 52px;
+    height: 27px;
+    background: #f1890c url(../images/so.png)  no-repeat center center;
+    position: absolute;
+    /*第二步*/
+    right: -1px;
+    top: -1px;
+}
+/*案例列表*/
+
+.main .cut{
+    width: 860px;
+}
+
+.main .ul-casePic {
+    width: 865px;
+}
+ .main .ul-casePic  li {
+   border: 2px solid #fff;
+   float: left;
+   width: 254px;
+   padding: 8px;
+   margin: 5px;
+}
+
+  .main .ul-casePic  li img {
+    width: 254px;
+    display: block;
+ }
+ 
+ .main .ul-casePic li:hover{
+    border-radius: 10px;
+    border:2px solid #f1890c;
+}
+/*s1*/
+.main .wp .pro-info .pages{
+    float: right;
+    margin-right:105px;
+    margin-top: 10px;
+}
+
+.main .wp .pro-info .pages ul li{
+
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main .wp .pro-info .pages ul li a{
+    display: block;
+    padding: 5px 10px;
+}
+
+.main .wp .pro-info .pages ul li:hover a{
+    background-color: #f1890c;
+    color: white;
+}
+.main .wp .pro-hot .pro-hot-top{
+    padding: 15px 20px 0 20px;
+}
+.main .wp .pro-hot .c1{
+    border: 1px solid #c9c9c9;
+}
+
+.main .wp .pro-hot .pro-top1{
+    height: 50px;
+    line-height: 50px;
+}
+.main .wp .pro-hot .pro-top1 strong{
+    font-size: 18px;
+    color: #505152;  
+}
+.main .wp .pro-hot-top .ul-hot p{
+    color: #7e7f80;
+    font-size: 12px;
+}
+.main .wp .pro-hot-top .pro-top1 a{
+    float: right;
+}
+.main .wp .pro-hot-top .pro-top1 a,.main .wp .pro-hot-top .ul-hot a{
+    color: #f08300;
+    font-size: 12px;
+}
+.main .wp .pro-hot .ul-hot{
+    margin-bottom: 18px;
+}
+.main .wp .pro-hot .ul-hot img{
+    width: 117px;
+    height:77px;
+    display:block;
+    float: left;
+}
+.main .wp .pro-hot .ul-hot li{
+    padding:  20px 0 40px 0;
+    border-bottom: 1px dashed #c9c9c9;     
+}
+.main .wp .pro-hot .ul-hot li .info{
+    margin-left: 125px;
+}
+ .main .wp .pro-hot .pro-hot-bottom{
+    border: 1px solid #c9c9c9;
+ }
+.main .wp .pro-hot  .pro-hot-bottom{
+    margin-top:16px;
+}
+.main .wp .pro-hot  .pro-hot-bottom .contact{
+    padding: 15px 20px 38px;
+}
+.mes-pi{
+    border: 1px solid #c9c9c9;
+    padding-top: 32px;
+    height: 72px;
+    background: url(../images/bottom1.jpg) no-repeat center center;
+}
+.mes-pi h3{
+    font-size: 24px;
+    color: #f08300;
+    text-align: center;
+}
+.mes-pi p{
+    text-align: center;
+    color: #000000;
+    font-size: 14.37px;
+}
+.main .wp .pro-hot  .pro-hot-bottom .contact a{
+    margin-top: 16px;
+    margin-bottom: 29px;
+    width: 100%;
+    height: 57px;
+    line-height: 57px;
+    border: 1px solid #ce7102;
+    display: block;
+    box-sizing: border-box;
+    padding-left: 39px;
+    font-size: 24px;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(to bottom,#f7bd77,#f08300);
+    margin-bottom: 20px;
+}
+
+.main .wp .pro-hot  .pro-hot-bottom .contact  img{
+    position: relative;
+    top: -2px;
+    margin-left: 30px;
+}
+
+.main .wp .pro-hot  .pro-hot-bottom .contact:hover{
+    opacity: 0.8;
+}
+
+.ewm{
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 3px #000;
+}
+footer{
+    background-color: #4b4948;
+    margin-top: 49px;
+}
+footer .fd-info{
+    padding: 45px 0px 40px 0px;
+    border-bottom: 1px solid #5f5e5d;   
+}
+.fd-info .left{
+    float: left;
+    width: 535px;
+    height: 165px;
+ }
+.fd-info .right{
+    float: right;
+    width: 600px;  
+    
+}
+
+.fd-info .left .l{
+    float: left;
+    width: 365px;
+    color: #fff;
+}
+
+.fd-info .left .r{
+    float: right;
+    width: 133px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.fd-info .left h3{
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.fd-info .left h3 strong{
+    color: #f08300;
+    font-size: 27px;
+    line-height: 51px;
+    font-weight: normal;
+}
+.fd-info .left .l p{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 22px;
+}
+.fd-info .left .l p a{
+    color: #fff; 
+}
+
+.fd-info .left .r img {
+    width: 133px;
+    height: 133px;
+    display: block;
+    margin-bottom: 5px;
+}
+.fd-info .left .r span{
+    font-family: "微软雅黑";
+    font-size: 13px;
+    color: #fff;   
+}
+/*fd-info的right*/
+.fd-info .right .spe{
+    float: left;
+    height: 165px;
+    border-left: 1px solid #5a5958;
+}
+.fd-info .right dl{
+    float: left;
+    width: 97px;
+    border-left: 1px solid #5a5958;
+    height: 165px;
+    padding-left: 33px;
+}
+.fd-info dl.dl-first{
+    height: auto;
+    border: none;
+}
+.fd-info .right dl dt,.fd-info .right dl dd{
+    color: #fff;
+    font-size: 16px;
+    /*dd控制不到里面的a*/
+}
+.fd-info .right dl dd{
+    height: 22px;
+}
+
+.fd-info .right dl dd a{
+    font-size: 14px;
+    color: #fff;
+}
+.fd-info .right dl a.a-spe{
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.fd-copy{
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+    color:white;
+}
+.fd-copy .left{
+    float:left;
+}
+.fd-copy .right{
+    float: right;
+}
+.fd-copy .right a{
+    color:white;
+}
+.fd-copy .left p img{
+    vertical-align: middle;
+}
+.bdsharebuttonbox{
+    float: left;
+}
+
+.a-more{
+    display:block;
+    /*float: right;*/
+    height: 15px;
+    line-height: 15px;
+    /*让字体上来*/
+    color: #fff;
+    margin-top: 10px;
+    padding-right: 43px;
+    background: url(../images/more.png) no-repeat right center;
+    border: 1px solid #fff;
+}
+        </style>
+    </head>
+    <body class="fix">
+        <!--头部登录--收藏-->
+        <header>
+            <div class="hd-top">
+                <div class="wp">
+                    <div class="left">
+                        <a href=""><img src="./images/icon-star.png">收藏嘟嘟</a>
+                    </div>
+                    <div class="right">
+                       <span>欢迎来到嘟嘟装饰!</span>
+                        <a href=""><img src="./images/xinlang.png">嘟嘟家装博客</a>
+                        <em>|</em>
+                        <a href=""><img src="./images/02.png" alt="微信">微信<img src="./images/03.png"></a>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div class="hd-buttom">
+                <div class="wp">
+                    <div class="left">
+                        <div class="logo">
+                            <a href="javascript:;"><img src="./images/05.png" class="on-off"></a>
+                            <div class="logo-text">
+                                <span>重质量赢客户，以口碑传都都</span>
+                            </div>
+                             <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span>18903388766</span><br>
+                        <em>没有固定时间，看心情。</em>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+        <!--end-->
+        <!--头部菜单导航-->
+        <nav>
+            <div class="wp">
+                <ul class="fix">
+                   <li><a href="">首页</a></li>
+                   <li class="on"><a href="">整体家装</a></li>
+                   <li>
+                       <a href="">装修案例
+                       </a>
+                   </li>
+                   <li><a href="" >设计明星</a>
+                            <dl>
+                               <dd><a href="">菜单一</a></dd>
+                               <dd><a href="">菜单二</a></dd>
+                               <dd><a href="">菜单三</a></dd>
+                           </dl>
+                    </li>
+                   <li><a href="">走进嘟嘟</a>
+                           <dl>
+                               <dd><a href="">菜单一</a></dd>
+                               <dd><a href="">菜单二</a></dd>
+                               <dd><a href="">菜单三</a></dd>
+                           </dl>
+                   </li>
+                   <li><a href="">服务规范</a>
+                    <dl>
+                               <dd><a href="">菜单一</a></dd>
+                               <dd><a href="">菜单二</a></dd>
+                               <dd><a href="">菜单三</a></dd>
+                           </dl>
+                   </li>
+                   <li><a href="">施工管理</a>
+                          <dl>
+                               <dd><a href="">菜单一</a></dd>
+                               <dd><a href="">菜单二</a></dd>
+                               <dd><a href="">菜单三</a></dd>
+                           </dl>
+                   </li>
+                   <li><a href="">在线服务</a>
+                            <dl>
+                               <dd><a href="">菜单一</a></dd>
+                               <dd><a href="">菜单二</a></dd>
+                               <dd><a href="">菜单三</a></dd>
+                           </dl>
+                   </li>
+                </ul>
+            </div>
+                          
+        </nav>
+        <!--end-->
+        <!--案例展示-->
+        <div class="banner">
+            <div id="slideBox" class="slideBox">
+                <div class="hd">
+                    <ul><li></li><li></li><li></li></ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <li><a href="#" target="_blank"><img src="images/banner.jpg" /></a></li>
+                        <li><a href="#" target="_blank"><img src="images/banner1.jpg" /></a></li>
+                        <li><a href="#" target="_blank"><img src="images/banner.jpg" /></a></li>
+                    </ul>
+                </div>
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+    	    </div>
+        </div>
+<!--         
+        <script src="./js/jquery.js"></script>
+        <script src="./js/SuperSlide.js"></script>
+        
+        <script>
+                jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $("nav ul li").hover(function(){
+                $(this).find("dl").stop(true,true).slideDown(300);  
+                },function(){
+                    $(this).find("dl").stop(true,true).slideUp(300);
+                });
+                $(".ul-pro li a").hover(function(){
+                    $(this).addClass("on").siblings().removeClass("on");
+                },function(){});
+            })
+            
+        </script> -->
+ 
+
+        <!--<section class="banner">
+            <img src="./images/banner.jpg" alt="" id="img">
+            
+        </section>-->
+        
+        <!--banner的底部文字-->
+        <div class="banner-buttom">
+            <div class="wp">
+                  <span>您所在的位置 :</span>  
+                <a href="">首页</a> >
+                 <a href="">  装修案例</a>    
+            </div>
+        </div>
+        
+        <div class="clear"></div>  
+        <div class="h45"></div>
+        <div class="main">
+            <div class="wp fix">
+                   <!--左边-->
+                <div class="pro-info">
+                    <!--头部的列表-->
+                    <div class="top">
+                        <ul class="ul-pro">
+                            <li>                         
+                                <span> 装修风格 :</span>  
+                                <a href="#" class="on" >全部</a>
+                                <a href="#">现代简约</a>
+                                <a href="#">田园</a>
+                                <a href="#">欧式</a>
+                                <a href="#">中式</a>
+                                <a href="#">地中海</a>
+                                <a href="#">混搭</a>
+                                <a href="#">美式乡村</a>
+                                <a href="#">其他</a>                                                        
+                            </li>
+                            
+                            <li>
+                            
+                                <span> 装修风格 :</span>  
+                                <a href="#" class="on" >全部</a>
+                                <a href="#">现代简约</a>
+                                <a href="#">田园</a>
+                                <a href="#">欧式</a>
+                                <a href="#">中式</a>
+                                <a href="#">地中海</a>
+                                <a href="#">混搭</a>
+                                <a href="#">美式乡村</a>
+                                <a href="#">其他</a>                                                        
+                            </li>
+    
+                            <li>
+                            
+                                <span> 装修风格 :</span>  
+                                <a href="#" class="on" >全部</a>
+                                <a href="#">现代简约</a>
+                                <a href="#">田园</a>
+                                <a href="#">欧式</a>
+                                <a href="#">中式</a>
+                                <a href="#">地中海</a>
+                                <a href="#">混搭</a>
+                                <a href="#">美式乡村</a>
+                                <a href="#">其他</a>                                                        
+                            </li>                       
+                        </ul>
+                     </div>
+                     <!--中间部分-->
+                    <div class="case-list">
+                        <div class="tit-a1 fix">
+                            <strong>案例列表</strong>
+                            <div class="so fix">
+                                <input type="text" name=""
+                                                    onfocus="if(this.value='查找您想要的案例'){this.value='';}" 
+                                                    onblur="if(!this.value){this.value=this.defaultValue;}"
+                                value="查找您想要的案例">
+                                <!--placeholder="查找您想要的案例"-->
+                                <input type="submit" name="" value="" class="sub-inp">
+                                
+                                <!--placeholder占位符，但是无法控制颜色-->
+                                
+                            </div>
+                            <div class="clear"></div> 
+                        </div>
+                        <!--图片列表-->
+                        <div class="cut">                                                    
+                            <ul class="ul-casePic fix">                                
+                                <li class="s1">
+                                    <a href="">
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="s2">
+                                    <a href="">
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="s3">
+                                    <a href="" >
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="s4">
+                                    <a href="" >
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>   
+                                </li>
+                                                          
+                                <li>
+                                    <a href="">
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+
+                                </li>
+                                                                
+                                <li>
+                                    <a href="" >
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+                                </li>
+                              
+                                
+                                <li>
+                                    <a href="" >
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+
+                                </li>
+                                
+                                <li>
+                                    <a href="">
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+
+                                </li>
+                                
+                                <li>
+                                    <a href="" >
+                                        <img src="images/case-pic1.png" alt="">
+                                        <h4>港湾家园</h4>
+                                        <span>公寓-欧式风格</span>
+                                    </a>
+
+                                </li>
+                            </ul>                        
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <ul>
+                            <li><a href="javascript:;">上一页</a></li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">下一页</a></li>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+               
+                <!--右边-->
+                <div class="pro-hot">
+                    <!--标题头部+图片列表-->
+                    <div class="c1">
+                          <div class="pro-hot-top fix">
+                        <div class="pro-top1 fix">
+                            <strong>热装小区</strong>
+                            <a href="">查看全部</a>
+                        </div>
+                        
+                            <ul class="ul-hot fix">
+                                <li>
+                                   <a href=""><img src="images/pro-top201.png" alt=""></a> 
+                                    <div class="info">
+                                        <strong>港湾家园</strong>
+                                        <p>公寓-欧式风格</p>
+                                        <a href="">查看案例</a>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                   <a href=""><img src="images/pro-top201.png" alt=""></a> 
+                                    <div class="info">
+                                        <strong>港湾家园</strong>
+                                        <p>公寓-欧式风格</p>
+                                        <a href="">查看案例</a>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                   <a href=""><img src="images/pro-top201.png" alt=""></a> 
+                                    <div class="info">
+                                        <strong>港湾家园</strong>
+                                        <p>公寓-欧式风格</p>
+                                        <a href="">查看案例</a>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                   <a href=""><img src="images/pro-top201.png" alt=""></a> 
+                                    <div class="info">
+                                        <strong>港湾家园</strong>
+                                        <p>公寓-欧式风格</p>
+                                        <a href="">查看案例</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                  
+                        <!--联系我们及二维码-->
+                    <div class="pro-hot-bottom">                        
+                        <div class="contact">
+                            <div class="mes-pi">
+                                <h3>咨询预约</h3>
+                                <p>Enquire Book</p>
+                            </div>
+                            <a href="">联系我们
+                                <img src="images/r.png" alt="">
+                            </a>
+                        </div>
+                        
+                    </div>                    
+               </div>
+            </div>
+                
+       </div>
+            
+        <footer>
+            <div class="fd-info">
+                <div class="wp fix">
+                    <div class="left fix">
+                        <div class="l fix">
+                            <h3>服务热线： <br>
+                                 <strong>110</strong>
+                            </h3>
+                            <p style="margin-bottom:16px;">
+                                TEL：13933348678　<br>
+                                E-MAIL：1347344401@qq.com　<br>
+                                ADDRESS：河北省石家庄鹿泉区劳动关系职业学校 <br>
+                            </p> 
+                           
+                            <p> 友情链接：
+                                <a href="">19楼</a>&nbsp
+                                <a href="">保障网 </a>&nbsp
+                                <a href=""> 装修第一网 </a>&nbsp
+                                <a href="">微博</a>
+                           </p>
+                        </div>
+                        <div class="r">
+                        </div>
+                    </div>
+                    
+                    <div class="right fix">
+                        <div class="spe fix">
+                             <dl class="dl-first">
+                                <dt>整体家装</dt>
+                                <dd><a href="">899套装</a> <br>
+                                    <a href="">1080套装</a> <br>
+                                    <a href="">装修案例</a> <br>
+                                    <a href="">明星设计</a> <br>
+                                </dd>
+                             </dl>
+                        
+                        </div>
+                       
+                            <dl>
+                                <dt>走进嘟嘟</dt>
+                                <dd>
+                                    <a href="">企业简介</a>
+                                    <a href="">品牌荣誉</a>
+                                    <a href="">企业文化</a>
+                                    <a href="">品牌历程</a>
+                                    <a href="">新闻中心</a>                                                          
+                                </dd>
+                            </dl>
+                            
+                             <dl>
+                                <dt>服务规范</dt>
+                                <dd>
+                                    <a href="">施工流程</a>
+                                    <a href="">标准工艺</a>
+                                    <a href="">售后保障</a>                                                       
+                                </dd>
+                            </dl>
+                            
+                            
+                            <dl>
+                                <dt>施工管理</dt>
+                                <dd>
+                                    <a href="">在建工地</a>                                                      
+                                </dd>
+                            </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="fd-copy">
+                <div class="wp fix">
+                    <div class="left">
+                            <img src="images/bottom2.png" alt="">
+                        </p>
+                    </div>
+                    <div class="right">                  
+                         <a href="">网站地图</a>
+                         <a href="">法律声明</a>
+                         <a href="">联系我们</a>
+                         <a href="">版权信息</a>
+                    </div>
+            </div>         
+            <div class="clear"></div>
+                        </div>
+                   </div>
+                   
+                </div>
+            </div>
+          
+        </footer>
+    </body>
+   
+</html>
+
+
+
